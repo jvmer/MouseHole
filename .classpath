@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="LocalProxy"/>
+	<classpathentry excluding="com/huawei/imp/mousehole/publish/PublishControlCodecFactory.java|com/huawei/imp/mousehole/publish/PublishControlDecoder.java|com/huawei/imp/mousehole/publish/PublishControlEncoder.java|com/huawei/imp/mousehole/publish/PublishControlIoHandler.java" kind="src" path="PublicPublish"/>
+	<classpathentry kind="src" path="Common"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="lib/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils-core.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/ezmorph-1.0.3.jar"/>
+	<classpathentry kind="lib" path="lib/ibatis-core-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/json-lib-2.3-jdk15.jar"/>
+	<classpathentry kind="lib" path="lib/mina-core-2.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/nlog4j-1.2.25.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc14-10g.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.5.11.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
