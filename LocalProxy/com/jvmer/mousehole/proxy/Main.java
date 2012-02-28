@@ -78,10 +78,11 @@ public class Main {
 		}
 		
 		proxyServer = new ProxyServer(localAppDestHost, localAppDestPort, controlHost, controlPort, connectTimeOut);
-		proxyServer.start();
+		//初始化连接对象
+		proxyServer.init();
 		
 		//守护线程
-		new DaemonThread().start();
+		new DaemonThread(proxyServer).start();
 	}
 	
 	/**
@@ -95,6 +96,9 @@ public class Main {
 		if(!file.exists())
 			file.mkdirs();
 		file = new File("receives/publish");
+		if(!file.exists())
+			file.mkdirs();
+		file = new File("logs");
 		if(!file.exists())
 			file.mkdirs();
 	}

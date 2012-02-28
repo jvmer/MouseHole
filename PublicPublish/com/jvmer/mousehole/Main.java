@@ -104,5 +104,8 @@ public class Main {
 		file = new File("receives/publish");
 		if(!file.exists())
 			file.mkdirs();
+		file = new File("logs");
+		if(!file.exists())
+			file.mkdirs();
 	}
 }

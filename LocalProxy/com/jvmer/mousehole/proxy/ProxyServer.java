@@ -81,6 +81,10 @@ public class ProxyServer {
 	 * 服务名字
 	 */
 	protected final String name;
+	/**
+	 * 连接对象
+	 */
+	protected ConnectFuture future;
 	
 	public ProxyServer(String localAppDestHost, int localAppDestPort, String controlHost, int controlPort, long connectTimeOut) {
 		name = "代理[local="+localAppDestHost+":"+localAppDestPort+" >> remote="+controlHost+":"+controlPort+"]";
@@ -92,7 +96,7 @@ public class ProxyServer {
 		this.connectTimeOut = connectTimeOut;
 	}
 	
-	public void start() {
+	public void init() {
 		//本地应用服务连接
 		localAppServerConnector = new NioSocketConnector();
 		//连接本地应用服务地址
@@ -115,12 +119,17 @@ public class ProxyServer {
 		
 		if(connectTimeOut>-1)
 			controlConnector.setConnectTimeoutMillis(connectTimeOut);
-
+	}
+	
+	/**
+	 * 连接控制服务器
+	 */
+	public void connection(){
 		//启用成功
 		if(logger.isInfoEnabled())
 			logger.info("启动"+name+"中...");
 				
-		ConnectFuture future = controlConnector.connect(controlServerAddress);
+		future = controlConnector.connect(controlServerAddress);
 		
 		try {
 			future.await();
@@ -134,6 +143,7 @@ public class ProxyServer {
 		if(logger.isInfoEnabled())
 			logger.info("启动"+name+(future.isConnected()?"成功":"失败"));
 	}
+	
 	/**
 	 * 获取控制服务器地址
 	 * @return
@@ -235,7 +245,7 @@ public class ProxyServer {
 	 */
 	public boolean createControlConnection() {
 		try{
-			controlConnector.connect(controlServerAddress);
+			future = controlConnector.connect(controlServerAddress);
 		}catch(Exception e){
 			if(logger.isErrorEnabled())
 				logger.error("[Proxy]connect "+localAppServerAddress+" error:", e);
@@ -293,5 +303,15 @@ public class ProxyServer {
 	 */
 	public void removeAppDataSession(IoSession session) {
 		localAppDataSessions.remove(session);
+	}
+
+	/**
+	 * 判断是否连接
+	 * @return
+	 */
+	public boolean isConnectioned() {
+		if(controlSession!=null && controlSession.isConnected())
+			return true;
+		return future!=null && future.isConnected();
 	}
 }
