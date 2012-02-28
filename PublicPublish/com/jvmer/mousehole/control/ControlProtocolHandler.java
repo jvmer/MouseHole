@@ -13,7 +13,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 控制端协议
- * @author Administrator
+ * @author butnet
  */
 public class ControlProtocolHandler extends IoHandlerAdapter {
 	protected static final Logger log = LogManager.getLogger(ControlProtocolHandler.class);

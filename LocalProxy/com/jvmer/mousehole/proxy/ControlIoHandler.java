@@ -15,7 +15,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 代理服务器与控制服务器间数据处理
- * @author zhangbo
+ * @author butnet
  */
 public class ControlIoHandler extends IoHandlerAdapter {
 	protected final Logger logger = LogManager.getLogger(ControlIoHandler.class);

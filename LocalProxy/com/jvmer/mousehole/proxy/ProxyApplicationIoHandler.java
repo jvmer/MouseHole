@@ -14,7 +14,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 代理服务器与应用服务器间数据处理
- * @author zhangbo
+ * @author butnet
  */
 public class ProxyApplicationIoHandler extends IoHandlerAdapter {
 	protected final Logger logger = LogManager.getLogger(ProxyApplicationIoHandler.class);

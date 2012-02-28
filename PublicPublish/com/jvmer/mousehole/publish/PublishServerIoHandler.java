@@ -15,7 +15,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 发布服务处理
- * @author Administrator
+ * @author butnet
  */
 public class PublishServerIoHandler extends IoHandlerAdapter {
 	protected final Logger logger = LogManager.getLogger(PublishServerIoHandler.class);

@@ -19,7 +19,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 控制服务(向代理服务发送命令,要求代理服务器建立新的连接)
- * @author zhangbo
+ * @author butnet
  */
 public class ControlServer {
 	/**

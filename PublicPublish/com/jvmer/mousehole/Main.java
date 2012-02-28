@@ -11,7 +11,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 主类
- * @author zhangbo
+ * @author butnet
  */
 public class Main {
 	/**

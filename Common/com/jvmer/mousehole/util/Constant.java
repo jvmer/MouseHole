@@ -5,7 +5,7 @@ package com.jvmer.mousehole.util;
  * @author Administrator
  */
 /**
- * @author zhangbo
+ * @author butnet
  *
  */
 public interface Constant {

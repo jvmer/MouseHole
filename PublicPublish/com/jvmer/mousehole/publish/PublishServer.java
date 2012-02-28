@@ -14,7 +14,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 发布服务
- * @author zhangbo
+ * @author butnet
  */
 public class PublishServer {
 	protected final Logger logger = LogManager.getLogger(PublishServer.class);

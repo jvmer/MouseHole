@@ -7,7 +7,7 @@ import org.apache.mina.core.session.IoSession;
 
 /**
  * 控制协议命令工具
- * @author zhangbo
+ * @author butnet
  */
 public class CommandTools {
 	/**

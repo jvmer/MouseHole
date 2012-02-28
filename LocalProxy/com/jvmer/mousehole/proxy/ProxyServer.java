@@ -18,7 +18,7 @@ import com.jvmer.mousehole.util.Constant;
 /**
  * 代理服务
  * 
- * @author zhangbo
+ * @author butnet
  */
 public class ProxyServer {
 	/**

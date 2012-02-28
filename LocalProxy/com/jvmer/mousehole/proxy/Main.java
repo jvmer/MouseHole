@@ -9,7 +9,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 本地代理服务启动主类
- * @author zhangbo
+ * @author butnet
  */
 public class Main {
 	/**

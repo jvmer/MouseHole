@@ -12,7 +12,7 @@ import com.jvmer.mousehole.util.Constant;
 
 /**
  * 控制服务器与发布服务,代理服务间解码
- * @author zhangbo
+ * @author butnet
  */
 public class ControlDecoder extends ProtocolDecoderAdapter {
 	protected final Logger logger = LogManager.getLogger(ControlDecoder.class);
