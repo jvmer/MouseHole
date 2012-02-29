@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.apache.mina.core.future.ConnectFuture;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
+import org.apache.mina.transport.socket.SocketSessionConfig;
 import org.apache.mina.transport.socket.nio.NioSocketConnector;
 
 import com.jvmer.mousehole.util.ByteTranslateCodecFactory;
@@ -119,6 +120,13 @@ public class ProxyServer {
 		
 		if(connectTimeOut>-1)
 			controlConnector.setConnectTimeoutMillis(connectTimeOut);
+		
+		SocketSessionConfig config = controlConnector.getSessionConfig();
+		if(config!=null){
+			config.setReaderIdleTime((int)(connectTimeOut/1000));  
+			config.setWriterIdleTime((int)(connectTimeOut/1000));  
+			config.setBothIdleTime((int)(connectTimeOut/1000));
+		}
 	}
 	
 	/**

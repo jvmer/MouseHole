@@ -20,7 +20,7 @@ public class DaemonThread extends Thread {
 					Thread.sleep(2000);
 				else{
 					proxyServer.connection();
-					Thread.sleep(1000);
+					Thread.sleep(60000);
 				}
 			}
 		} catch (InterruptedException e) {
